@@ -12,7 +12,8 @@ docker build -t batchsignalmsg .
 
 ## Docker Run
 ```
-docker run -it --rm --name batchsignalmsg batchsignalmsg
+docker run -d -it --name batchsignalmsg batchsignalmsg
+docker exec -it ce2db81ba582 /bin/bash
 ```
 
 ## Link Device
