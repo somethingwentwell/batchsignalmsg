@@ -28,3 +28,8 @@ bash batchSend.sh <User> <Message File> <Attachment> <3 Digits Number Set 1> <3 
 OR
 docker exec batchsignalmsg /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
+
+## Retrieve Data
+```
+cd /root/.local/share/signal-cli/data
+```
