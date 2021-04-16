@@ -6,6 +6,7 @@ docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
+---
 # RUN FROM DOCKER HUB
 ```
 docker run -d -it --name <Container Name> warching/batchsignalmsg /bin/bash
