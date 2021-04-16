@@ -11,29 +11,30 @@ docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message Fil
 ```
 node app.js
 ```
-
 ## Docker Build
 ```
 docker build -t batchsignalmsg .
 ```
-
 ## Docker Run
 ```
 docker run -d -it --name <Container Name> batchsignalmsg /bin/bash
 docker exec -it <Container Name> /bin/bash
 ```
-
+OPERATIONS
+---
 ## Link Device
 ```
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 ```
-
 ## Batch Send Command
 ```
 docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
----
-# RETRIEVE DATA
+## Retrieve Data
 ```
 docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal-cli/data/*"
+```
+## Count Recipients
+```
+docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal-cli/data/*" | jq '.recipientStore.recipientStore' | jq length
 ```
