@@ -25,7 +25,7 @@ docker exec -it <Container Name> /bin/bash
 
 ## Link Device
 ```
-signal-cli link -n signaladv
+docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 ```
 
 ## Batch Send Command
