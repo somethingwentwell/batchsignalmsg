@@ -1,7 +1,6 @@
 # FROM DOCKER HUB
 ```
 docker run -d -it --name <Container Name> warching/batchsignalmsg /bin/bash
-docker exec -it <Container Name> /bin/bash
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
