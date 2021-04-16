@@ -24,7 +24,6 @@ docker build -t batchsignalmsg .
 ## Docker Run
 ```
 docker run -d -it --name <Container Name> batchsignalmsg /bin/bash
-docker exec -it <Container Name> /bin/bash
 ```
 ---
 # OPERATIONS
