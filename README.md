@@ -42,5 +42,5 @@ docker exec batchsignalmsg /bin/bash -c "bash batchSend.sh <User> <Message File>
 ```
 cd /root/.local/share/signal-cli/data
 OR
-docker exec test /bin/sh -c "cat ../../../root/.local/share/signal-cli/data/*"
+docker exec test /bin/bash -c "cat ../../../root/.local/share/signal-cli/data/*"
 ```
