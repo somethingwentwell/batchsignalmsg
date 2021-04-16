@@ -2,6 +2,8 @@
 ```
 docker run -d -it --name <Container Name> warching/batchsignalmsg /bin/bash
 docker exec <Container Name> /bin/bash -c "echo '<Your Mobile Number>' > 000/00000000.txt ; rm 000/00000500.txt"
+docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<Message File Name>"
+docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name> <Attachment Public URL>"
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
@@ -22,6 +24,14 @@ docker exec -it <Container Name> /bin/bash
 ```
 OPERATIONS
 ---
+## Update Message
+```
+docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<Message File Name>"
+```
+## Update Attachment
+```
+docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name> <Attachment Public URL>"
+```
 ## Link Device
 ```
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
