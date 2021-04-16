@@ -22,8 +22,8 @@ docker build -t batchsignalmsg .
 docker run -d -it --name <Container Name> batchsignalmsg /bin/bash
 docker exec -it <Container Name> /bin/bash
 ```
-# OPERATIONS
 ---
+# OPERATIONS
 ## Update Message
 ```
 docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<Message File Name>"
