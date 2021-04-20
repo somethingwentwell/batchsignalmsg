@@ -4,7 +4,7 @@ docker exec <Container Name> /bin/bash -c "echo '<Your Mobile Number>' > 000/000
 docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<Message File Name>"
 docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name> <Attachment Public URL>"
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
-docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
+docker exec -d <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
 ---
 # RUN FROM DOCKER HUB
@@ -41,7 +41,7 @@ docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 ```
 ## Batch Send Command
 ```
-docker exec <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
+docker exec -d <Container Name> /bin/bash -c "bash batchSend.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ..."
 ```
 ## Retrieve Data
 ```
