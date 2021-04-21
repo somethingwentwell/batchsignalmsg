@@ -18,7 +18,7 @@ do
             signal-cli -u $username send -m "$message" [$recipients] -a $attachment
             set +e
         fi
-        sleep 360
+        sleep 1800
     done
 done
 echo Completed
