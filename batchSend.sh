@@ -19,6 +19,7 @@ do
             set +e
         fi
     done
+    sleep 360
 done
 echo Completed
 
