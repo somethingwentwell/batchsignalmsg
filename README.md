@@ -1,6 +1,6 @@
 # GENERAL FLOW
 ```
-docker exec <Container Name> /bin/bash -c "echo '<Your Mobile Number>' > 000/00000000.txt ; rm 000/00000500.txt"
+docker exec <Container Name> /bin/bash -c "echo '<Your Mobile Number>' > 000/00000000.txt"
 docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<Message File Name>"
 docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name> <Attachment Public URL>"
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
