@@ -18,8 +18,8 @@ for (i in numList) {
         let tempNum = "+852" + numList[i] + pad(j, 5);
         tempList.push(tempNum);
         counter++;
-        if (counter >= 500) {
-            fileName = "./" + numList[i].toString() + "/" + numList[i].toString() + (pad(j-499, 5)).toString() + '.txt';
+        if (counter >= 200) {
+            fileName = "./" + numList[i].toString() + "/" + numList[i].toString() + (pad(j-199, 5)).toString() + '.txt';
             fs.writeFileSync(fileName, tempList.join(", "), function (err) {
                 if (err)
                     console.log(err);
