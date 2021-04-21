@@ -9,7 +9,7 @@ for var in $@
 do
     for f in $var/*.txt; do
         recipients=$(<$f)
-        echo Sending to 500 numbers in $f
+        echo Sending to 200 numbers in $f
         if [[ $attachment == content/0 ]]
         then
             signal-cli -u $username send -m "$message" [$recipients]
