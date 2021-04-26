@@ -59,3 +59,7 @@ docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal
 ```
 docker exec <Container Name> /bin/bash -c "tail -f msglog.txt"
 ```
+## Get Recipient List
+```
+docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal-cli/data/*" | jq '.recipientStore.recipientStore[].name' > <Container Name>-recipients.txt
+```
