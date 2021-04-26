@@ -45,7 +45,7 @@ docker exec -d <Container Name> /bin/bash -c "bash batch-send.sh <User> <Message
 ```
 ## Range Send Command
 ```
-docker exec -d <Container Name> /bin/bash -c "bash batch-send.sh <User> <Message File> <Attachment | Type 0 if no attachment> <8 Digits Starting Number> <8 Digits Ending Number> > msglog.txt"
+docker exec -d <Container Name> /bin/bash -c "bash range-send.sh <User> <Message File> <Attachment | Type 0 if no attachment> <8 Digits Starting Number> <8 Digits Ending Number> > msglog.txt"
 ```
 ## Retrieve Data
 ```
