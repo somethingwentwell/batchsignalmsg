@@ -68,3 +68,7 @@ docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal
 ```
 crontab -l | { cat; echo "* */1 * * * bash count-remind.sh <Container Name> <User> [<Your Mobile 1>, <Your Mobile 2>, ...] <Message Limit>"; } | crontab -
 ```
+## Remove Specific Cronjob
+```
+crontab -e
+```
