@@ -5,6 +5,7 @@ docker exec <Container Name> /bin/bash -c "echo '<Message Content>' > content/<M
 docker exec <Container Name> /bin/bash -c "wget -O content/<Attachment File Name> <Attachment Public URL>"
 docker exec <Container Name> /bin/bash -c "signal-cli link -n signaladv"
 docker exec -d <Container Name> /bin/bash -c "bash batch-send.sh <User> <Message File> <Attachment | Type 0 if no attachment> <3 Digits Number Set 1> <3 Digits Number Set 2> <3 Digits Number Set N> ... > msglog.txt"
+crontab -l | { cat; echo "* */1 * * * bash count-remind.sh <Container Name> <User> [<Your Mobile 1>, <Your Mobile 2>, ...] <Message Limit>"; } | crontab -
 ```
 ---
 # RUN FROM DOCKER HUB
@@ -62,4 +63,8 @@ docker exec <Container Name> /bin/bash -c "tail -f msglog.txt"
 ## Get Recipient List
 ```
 docker exec <Container Name> /bin/bash -c "cat ../../../root/.local/share/signal-cli/data/*" | jq '.recipientStore.recipientStore[].name' > <Container Name>-recipients.txt
+```
+## Set Hourly Reminder & Stop Container When Reach Limit
+```
+crontab -l | { cat; echo "* */1 * * * bash count-remind.sh <Container Name> <User> [<Your Mobile 1>, <Your Mobile 2>, ...] <Message Limit>"; } | crontab -
 ```
